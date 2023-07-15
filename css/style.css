@@ -83,25 +83,27 @@ nav{
 /*</HEADER*/
 /*<MAIN>*/
 /*QUIENES-SOMOS*/
-.quienes-somos div h4{
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-weight: lighter;
-    color: black;
+.quienes-somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.quienes-somos div h2{
-    text-align: center;
-    font-size: 2.5rem;
-    color: rgb(56, 55, 55);
+.quienes-somos h2{
+    margin-bottom: .9375rem;
 }
 .somos{
-    position: relative;
+    left: 6.75rem;
+    width: 70ch;
+    margin: auto;
+    position: unset;
+    text-align: center;
+}
+/* .somos{
     max-width: 50rem;
     text-align: center;
     left: 35rem;
     font-weight: lighter;
-}
+} */
 /*CÍRCULO-SERVICIOS*/
 .servicios-container{
     display: flex;
@@ -961,6 +963,9 @@ nav{
     background-position: center;
     border-radius: 100%;
 }
+.servicios-footer-container li{
+    height: auto;
+}
 /*----------------------------------------------------------------------------*/
 /*CONTACTO-PAGE*/
 /*HEADER*/
@@ -982,6 +987,17 @@ nav{
     background: linear-gradient(to right, hsla(179, 69%, 48%, 0.603), #1A2980), url(../assets/img/contacto3.jpg);
 }
 /*MAIN*/
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+.main-contacto{
+    max-width: 78.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .flex-contacto{
     display: flex;
     flex-direction: column;
@@ -989,13 +1005,13 @@ nav{
     justify-content: center;
 }
 .flex-contacto div h4{
-    position: relative;
     top: 30rem;
 }
 .textos-comunicacion{
-    position: relative;
     top: 26.25rem;
     text-align: center;
+    max-width: 70ch;
+    padding: 1.875rem 0;
 }
 .contacto-comercial{
     height: 3rem;
@@ -1003,71 +1019,29 @@ nav{
     background-color: #D9D9D9;
     border-radius: 10%;
     text-align: center;
-    position: relative;
     top: 12.5rem;
 }
 /*FORMULARIO*/
 /*DATOS PERSONALES*/
-.datos-personales{
+.formulario-1{
+    background-color: #45d4cdb6;
+    padding: 2.5rem;
+}
+.formulario-1 form{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 31.25rem;
-    background-color: #D9D9D9;
-    width: 50rem;
-    height: 4rem;
-    text-align: center;
-    border: .0625rem solid rgb(164, 171, 172);
-    border-radius: 5%;
+    flex-direction: column;
+    gap: 1.25rem;
 }
-/*DATOS DE LA EMPRESA*/
-.datos-de-la-empresa{
+.datos-requeridos{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    position: relative;
-    top: 33.125rem;
     background-color: #D9D9D9;
-    width: 50rem;
-    height: 4rem;
+    padding: .9375rem;
     text-align: center;
     border: .0625rem solid rgb(164, 171, 172);
     border-radius: 5%;
-}
-.mail{
-    width: 15rem;
-}
-/*NOMBRE DE LA COMPANIA*/
-.nombre-dlc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 35rem;
-    background-color: #D9D9D9;
-    width: 50rem;
-    height: 4rem;
-    text-align: center;
-    border: .0625rem solid rgb(164, 171, 172);
-    border-radius: 5%;
-}
-.nombre-dlc-inp{
-    width: 17rem;
-}
-.pais{
-    width: 15rem;
-}
-/*CUENTANOS ACERCA DE LOS SERVICIOS QUE BUSCAS*/
-.cuentanos-ssb{
-    background-color: #D9D9D9;
-    width: 50rem;
-    height: 4rem;
-    text-align: center;
-    border: .0625rem solid rgb(164, 171, 172);
-    border-radius: 5%;
-    position: relative;
-    top: 36.875rem;
 }
 .cuen-inp{
     width: 35rem;
@@ -1080,36 +1054,17 @@ nav{
     height: 2rem;
     background-color: #FF6B00;
     border-radius: 10%;
-    position: relative;
-    top: 40.625rem;
-}
-/*CV*/
-.cv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    width: 50rem;
-    height: 4rem;
-    text-align: center;
-    border: .0625rem solid rgb(164, 171, 172);
-    border-radius: 5%;
-    position: relative;
-    top: 38.75rem;
 }
 /*MAPA-SUCURSALES*/
 .nuestras-sucursales{
-    position: relative;
-    top: 50rem;
+    padding: 3.125rem;
 }
-.mapa{
-    width: 60rem;
-    height: 40rem;
+.mapa iframe{
+    max-width: 50rem;
+    max-height: 31.25rem;
     background-color: #D9D9D9;
     text-align: center;
-    margin-bottom: 68.75rem;
-    position: relative;
-    top: 50rem;
+    margin-bottom: 18.75rem;
 }
 @media (max-width:1024px){
     nav{
@@ -1136,9 +1091,6 @@ nav{
         gap: .625rem;
         justify-content: center;
         margin-right: 75rem;
-    }
-    .somos{
-        left: 6.75rem;
     }
     .buscando-container{
         display: flex;
@@ -1197,13 +1149,11 @@ nav{
     }
     .f-logo{
         position: unset;
+        display: flex;
+        flex-direction: row;
     }
     .container-contacto-f{
         margin-bottom: 15px;
-    }
-    .f-logo{
-        display: flex;
-        flex-direction: row;
     }
     .prueba-logo{
         display: flex;
@@ -1219,3 +1169,26 @@ nav{
         margin: 0px 5px;
     }
 }
+@media (max-width: 768px){
+    nav{
+        background-repeat: no-repeat;
+        height: 34.375rem;
+    }
+    .logo-nav img{
+        left: 210px;
+        top: -10px;
+        right: 0px;
+        bottom: 0px;
+    }
+    .navbar-container{
+        display: flex;
+        justify-content: center;
+    }
+    .calidad{
+        position: unset;
+        top: 0;
+        margin-top: 2.75rem;
+    }
+}
+
+
