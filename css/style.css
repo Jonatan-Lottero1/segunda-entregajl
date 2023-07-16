@@ -1,37 +1,157 @@
-*{
+* {
+    font-family: "jona-font";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "jona-font";
     src: url(../assets/fonts/RobotoCondensed-Regular.ttf);
 }
+
 /*BODY*/
-body{
+body {
     overflow-x: hidden;
 }
+
 /*<HEADER>*/
+header {
+    position: relative;
+}
+
 /*NAVBAR*/
-.logo-nav img{
+/*MENU DESPLEGABLE*/
+.menu-desplegable a {
+    text-decoration: none;
+}
+
+.menu-desplegable {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    ;
+}
+
+.menu a {
+    display: block;
+    padding: 1.875rem;
+    color: white;
+}
+
+.menu a:hover {
+    background-color: #9F1B09;
+}
+
+.menu-desplegable {
+    background-color: blue;
+    box-shadow: 1px 1px 5px 0px grey;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo-mq {
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.nav-hamb {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: green;
+    overflow-x: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb {
+    z-index: 1;
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 100%;
     position: absolute;
-    bottom: 54.375rem;
-    left: 23.125rem;
-    top: .625rem;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked~.nav-hamb {
+    max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/*FIN DEL MENU DESPLEGABLE*/
+.logo-nav img {
     height: 6.25rem;
     width: 14rem;
 }
-nav{
+
+.logo-nav {
+    padding: .625rem;
+}
+
+nav {
     width: 100%;
     height: 50rem;
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
-.navbar li{
+
+.navbar li {
     position: relative;
     display: inline;
     padding: 1rem;
@@ -39,22 +159,26 @@ nav{
     left: 43.75rem;
     top: 1.25rem;
 }
-.navbar li a{
-    text-align:center;
+
+.navbar li a {
+    text-align: center;
     position: relative;
     text-decoration: none;
     color: #FFFFFF;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
     color: #ff4800;
 }
-.waves{
+
+.waves {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+
 /*NAV-INTRODUCCIÓN*/
-.calidad h1{
+.calidad h1 {
     font-family: "jona-font";
     color: #f18130;
     text-decoration: bold;
@@ -62,42 +186,48 @@ nav{
     text-align: center;
     position: relative;
 }
-.calidad{
+
+.calidad {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #FFFFFF;
     font-size: xx-large;
     font-weight: lighter;
-    position: relative;
-    top: 9.375rem;
-    /* left: 28.125rem; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
     text-align: center;
+    transform: translate(-50%, -50%)
 }
-.text-container p{
+
+.text-container p {
     position: relative;
     max-width: 43.75rem;
     font-family: "jona-font";
 }
+
 /*WAVES*/
 /*</HEADER*/
 /*<MAIN>*/
 /*QUIENES-SOMOS*/
-.quienes-somos{
+.quienes-somos {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.quienes-somos h2{
+
+.quienes-somos h2 {
     margin-bottom: .9375rem;
 }
-.somos{
-    left: 6.75rem;
-    width: 70ch;
-    margin: auto;
-    position: unset;
+
+.somos {
+    max-width: 700px;
+    margin: 1rem;
     text-align: center;
 }
+
 /* .somos{
     max-width: 50rem;
     text-align: center;
@@ -105,62 +235,72 @@ nav{
     font-weight: lighter;
 } */
 /*CÍRCULO-SERVICIOS*/
-.servicios-container{
+.servicios-container {
+    align-items: center;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
 }
-.circulos-servicios{
-    position: relative;
+
+.circulos-servicios {
     margin: 4.375rem;
     display: flex;
-    left: 6.25rem;
     justify-content: center;
 }
-.circulo-s{
+
+.circulo-s {
     position: absolute;
     height: 12.5rem;
     width: 12.5rem;
     background-color: #463BC8;
     border-radius: 100%;
 }
-.circulo-s2{
+
+.circulo-s2 {
     position: relative;
     height: 12.5rem;
     width: 12.5rem;
     left: 1.875rem;
     top: .625rem;
-    background-image: url(../assets/img/nuestrosservicios.jpg); overflow: hidden;
+    background-image: url(../assets/img/nuestrosservicios.jpg);
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     border-radius: 100%;
 }
-.tenemos{
-    margin: 8.125rem;
+
+.tenemos {
+    margin: 1rem;
 }
-.tenemos h3{
+
+.tenemos h3 {
     color: rgb(53, 53, 53);
     font-family: "jona-font";
     text-align: center;
 }
-.tenemos p{
+
+.tenemos p {
     font-family: "jona-font";
     text-align: center;
     max-width: 50rem;
-    text-align: center;
 }
+
 /*CÍRCULO-OFERTAS-LABORALES*/
 
-.buscando-container{
+.buscando-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+.circulos-buscando {
+    margin: 4.375rem;
     display: flex;
     justify-content: center;
 }
-.circulos-buscando{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 60px;
-}
-.circulo-o{
+
+.circulo-o {
     position: absolute;
     display: flex;
     height: 12.5rem;
@@ -168,42 +308,49 @@ nav{
     background-color: #EABB42;
     border-radius: 100%;
 }
-.circulo-o2{
+
+.circulo-o2 {
     position: relative;
     top: .625rem;
     height: 12.5rem;
     width: 12.5rem;
     right: 1.875rem;
-    background-image: url(../assets/img/ofertaslaborales.jpg); overflow: hidden;
+    background-image: url(../assets/img/ofertaslaborales.jpg);
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     border-radius: 100%;
 }
-.buscando{
-    position: relative;
-    top: 2.5rem;
+
+.buscando {
+    text-align: center;
+    margin: 1rem;
 }
-.buscando h3{
+
+.buscando h3 {
     color: rgb(53, 53, 53);
 }
-.buscando p{
+
+.buscando p {
     font-family: "jona-font";
     max-width: 50rem;
 }
+
 /*CÍRCULO-TRABAJA-CON-NOSOTROS*/
-.trabaja-container{
+.trabaja-container {
+    align-items: center;
+    flex-wrap: wrap;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
-.circulos-trabaja{
-    left: 10.5rem;
+
+.circulos-trabaja {
     margin: 4.375rem;
     display: flex;
     justify-content: center;
-    position: relative;
 }
-.circulo-t{
+
+.circulo-t {
     position: absolute;
     display: flex;
     height: 12.5rem;
@@ -211,7 +358,8 @@ nav{
     background-color: #79CD78;
     border-radius: 100%;
 }
-.circulo-t2{
+
+.circulo-t2 {
     left: 1.875rem;
     top: .625rem;
     position: relative;
@@ -222,29 +370,40 @@ nav{
     background-position: center;
     border-radius: 100%;
 }
-.posiciona{
-    position: relative;
-    margin: 8.125rem;
-    left: 2.1875rem;
+
+.posiciona {
+    max-width: 700px;
+    margin: 1rem;
     text-align: center;
 }
-.posiciona h3{
-    width: 59.375rem;
+
+.posiciona h3 {
     color: rgb(53, 53, 53);
 }
-.posiciona p{
+
+.posiciona p {
     align-items: center;
     font-family: "jona-font";
     max-width: 60rem;
 }
+
 /*CÍRCULO-CONTÁCTANOS*/
-.circulos-contacto{
+.contacto-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.circulos-contacto {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8.125rem;
+    margin: 3rem;
 }
-.circulo-c{
+
+.circulo-c {
     position: absolute;
     display: flex;
     height: 12.5rem;
@@ -252,7 +411,8 @@ nav{
     background-color: #45D4CC;
     border-radius: 100%;
 }
-.circulo-c2{
+
+.circulo-c2 {
     left: 2.625rem;
     top: .625rem;
     position: relative;
@@ -263,50 +423,55 @@ nav{
     background-position: center;
     border-radius: 100%;
 }
-.contact-us{
-    position: relative;
-    left: 7.5rem;
-    height: 1.875rem;
-    width: 9.375rem;
-    border-radius: 10%;
+
+.contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     background-color: #f44336;
     text-align: center;
 }
-.contact-us a{
-    position: relative;
-    top: .3125rem;
+
+.contact-us a {
     text-decoration: none;
     color: #FFFFFF;
     font-family: "jona-font";
 }
+
 /*</MAIN>*/
 /*<FOOTER>*/
-.footer{
+.footer {
     position: relative;
     background-color: #181445;
     height: 31.25rem;
     bottom: 0 auto;
 }
-.redes-footer-container{
+
+.redes-footer-container {
     position: relative;
     display: flex;
     justify-content: end;
     right: 34.375rem;
     bottom: 3.125rem;
 }
-.redes-footer-container ul li{
+
+.redes-footer-container ul li {
     list-style: none;
 }
+
 /*LOGO-FOOTER*/
-.f-logo{
+.f-logo {
     position: relative;
     width: 12.5rem;
     height: 12.5rem;
     left: 20rem;
     top: 10.625rem;
 }
+
 /*SERVICIOS-FOOTER*/
-.servicios-footer li a{
+.servicios-footer li a {
     font-family: "jona-font";
     position: relative;
     text-decoration: none;
@@ -314,44 +479,52 @@ nav{
     font-size: small;
     left: 53.125rem;
 }
+
 /*LOGOS-REDES*/
-.redes-footer-container ul{
+.redes-footer-container ul {
     display: flex;
     flex-direction: row;
     gap: .9375rem;
 }
-.linkedin a img{
+
+.linkedin a img {
     width: 2.5rem;
     height: 2.5rem;
 }
-.facebook a img{
+
+.facebook a img {
     width: 2.5rem;
     height: 2.5rem;
 }
-.instagram a img{
+
+.instagram a img {
     width: 2.5rem;
     height: 2.5rem;
 }
-.twitter a img{
+
+.twitter a img {
     width: 2.5rem;
     height: 2.5rem;
 }
+
 /*GMAIL-DERECHOS*/
-.derechos{
+.derechos {
     display: flex;
     justify-content: center;
     align-items: end;
     font-family: "jona-font";
     color: #FFFFFF;
 }
-.contacto-f{
+
+.contacto-f {
     font-family: "jona-font";
     position: relative;
     color: #FFFFFF;
     left: 71.875rem;
     bottom: 6.875rem;
 }
-.gmail{
+
+.gmail {
     font-family: "jona-font";
     color: #FFFFFF;
     position: relative;
@@ -360,49 +533,59 @@ nav{
     text-decoration: none;
     font-size: small;
 }
+
 /*</FOOTER>*/
 /*-------------------------------------------------------------------------*/
 /*SERVICIOS-PAGE*/
 /*HEADER*/
-.navbar-servicios{
+.navbar-servicios {
     width: 100%;
     height: 50rem;
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgservicios.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgservicios.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgservicios.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgservicios.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom;
     position: relative;
 }
-.wave-servicio svg{
+
+.wave-servicio svg {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-.logo-nav-ser img{
+
+.logo-nav-ser img {
     position: absolute;
     bottom: 54.375rem;
-    
+
     top: .625rem;
     height: 6.25rem;
     width: 14rem;
 }
-.texto-ns{
+
+.texto-ns {
     font-family: "jona-font";
     position: relative;
     max-width: 50rem;
     right: 2rem;
 }
+
 /*<MAIN>*/
-.main h3{
+.main h3 {
     position: relative;
     font-family: "jona-font";
     text-align: center;
     /* top: 5rem; */
 }
+
 /*ALCANCE*/
-.alcance{
+.alcance {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,8 +600,9 @@ nav{
     top: 15rem;
     left: 5rem;
 }
+
 /*EFICIENCIA*/
-.eficiencia{
+.eficiencia {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,8 +615,9 @@ nav{
     text-align: center;
     left: 43.5rem;
 }
+
 /*FLEXIBILIDAD*/
-.flexibilidad{
+.flexibilidad {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,8 +631,9 @@ nav{
     left: 82rem;
     bottom: 15rem;
 }
+
 /*CONOCIMIENTO*/
-.conocimiento{
+.conocimiento {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -461,8 +647,9 @@ nav{
     left: 5rem;
     bottom: 6rem;
 }
+
 /*CALIDAD*/
-.calidad-s{
+.calidad-s {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -476,8 +663,9 @@ nav{
     left: 43.5rem;
     bottom: 21rem;
 }
+
 /*ADAPTABILIDAD*/
-.adaptabilidad{
+.adaptabilidad {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -491,8 +679,9 @@ nav{
     left: 82rem;
     bottom: 36rem;
 }
+
 /*NUESTRA-COMPANIA*/
-.nuestra-compania{
+.nuestra-compania {
     width: 35rem;
     height: 20rem;
     background-color: #C2DEDC;
@@ -502,7 +691,8 @@ nav{
     position: relative;
     border: .125rem solid black;
 }
-.nuestra-compania p{
+
+.nuestra-compania p {
     max-width: 25rem;
     position: absolute;
     font-family: "jona-font";
@@ -510,10 +700,11 @@ nav{
     top: 6.4rem;
     left: 4.5rem;
     color: #FFFFFF;
-    
+
 }
+
 /*N-SERVICIOS*/
-.n-servicios{
+.n-servicios {
     position: relative;
     background-color: #C2DEDC;
     border: .125rem solid black;
@@ -523,7 +714,8 @@ nav{
     bottom: 10rem;
     border-radius: 5%;
 }
-.n-servicios p{
+
+.n-servicios p {
     max-width: 40rem;
     font-family: "jona-font";
     position: absolute;
@@ -532,353 +724,365 @@ nav{
     left: 6.9rem;
     color: #FFFFFF;
 }
+
 /*</MAIN*/
 /*FOOTER*/
 /*--------------------------------------------------------------------------*/
 /*OFERTAS-LABORALES-PAGE*/
 /*HEADER*/
-.navbar-ofertas-laborales{
+.navbar-ofertas-laborales {
     width: 100%;
     height: 50rem;
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgofertaslaborales.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgofertaslaborales.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgofertaslaborales.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imgofertaslaborales.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     position: relative;
 }
-.nuestra-mision p{
+
+.nuestra-mision p {
     font-family: "jona-font";
     text-align: center;
     max-width: 15rem;
 }
-.wave-ofertala svg{
+
+.wave-ofertala svg {
     position: absolute;
     width: 100%;
     bottom: 0;
 }
+
 /*<MAIN>*/
-.main-ol{
+.main-ol {
     font-family: "jona-font";
 }
-.main-ol div h3{
-    position: relative;
-    top: 5rem;
+
+.main-ol div h3 {
     text-align: center;
+    margin-bottom: 2rem;
 }
-.grids{
+
+.grids {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 6.25rem;
     grid-template-columns: 1fr;
-    /* position: relative; */
-    height: 102vh;
-    /* top: 18.75rem; */
+    justify-items: center;
+    margin: 6rem 0;
 }
+
 /*OFERTA-1*/
-.oferta-1{
-    grid-row: 1/2;
-    grid-column: 1/2;
-    /* margin-left: 29.6875rem; */
-    column-gap: .3125rem;
-    /* position: relative; */
-    background-color: #D9D9D9;
-    width: 60rem;
-    height: 20rem;
-    /* top: 20rem;
-    left: 29rem; */
-    border-radius: 3%;
-    /* margin-left: 29.6875rem;
+.oferta-1 {
+
     column-gap: .3125rem;
     position: relative;
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
-    top: 20rem;
-    left: 29rem;
-    border-radius: 3%; */
+    border-radius: 10px;
 }
+
 /*LOGO-JHONSCLEAN*/
-.oferta-1 figure img{
+.oferta-1 figure img {
     position: absolute;
     width: 17rem;
     left: 2rem;
     top: 2rem;
 }
+
 /*OPERADOR-INDUSTRIAL-TEXT*/
-.oferta-1 div h4{
+.oferta-1 div h4 {
     position: absolute;
     top: 10rem;
     left: 2rem;
 }
+
 /*MAQUINARIA-TEXT*/
-.maquinaria{
+.maquinaria {
     position: absolute;
     color: #929292;
     left: 2rem;
     top: 12rem;
 }
+
 /*UBICACION-PNG*/
-.ubicacion-ol img{
+.ubicacion-ol img {
     position: relative;
     left: 2rem;
     top: 16.5rem;
 }
+
 /*SAN-LORENZO-TEXT*/
-.argentina-sanlorenzo{
+.argentina-sanlorenzo {
     color: #929292;
     position: absolute;
     top: 16.9rem;
     left: 6rem;
 }
+
 /*CALENDARIO-PNG*/
-.calendario img{
+.calendario img {
     position: relative;
     left: 18rem;
     top: 14.4rem;
 }
+
 /*FECHA-TEXT*/
-.fecha{
+.fecha {
     color: #929292;
     position: relative;
     top: 12.4rem;
     left: 22rem;
 }
+
 /*RELOJ-PNG*/
-.reloj img{
+.reloj img {
     position: relative;
     left: 50rem;
     top: 10.9rem;
 }
+
 /*FULL-TIME-TEXT*/
-.full-time{
+.full-time {
     position: relative;
     color: #929292;
     left: 54rem;
     top: 9rem;
 }
+
 /*FLECHA-PNG*/
-.flecha img{
+.flecha img {
     position: absolute;
     left: 55.5rem;
     bottom: 16rem;
 }
+
 /*MAS-INFO-TEXT*/
-.mas-info{
+.mas-info {
     position: absolute;
     color: #929292;
     left: 51rem;
     bottom: 16.4rem;
 }
+
 /*OFERTA-2*/
-.oferta-2{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    /* margin-left: 29.6875rem; */
-    /* position: relative; */
-    background-color: #D9D9D9;
-    width: 60rem;
-    height: 20rem;
-    /* top: 30rem;
-    left: 29rem;  */
-    border-radius: 3%;
-    /* margin-left: 29.6875rem;
+.oferta-2 {
     position: relative;
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
-    top: 30rem;
-    left: 29rem; 
-    border-radius: 3%; */
+    border-radius: 10px;
 }
 /*LOGO-JHONSCLEAN*/
-.oferta-2 figure img{
+.oferta-2 figure img {
     position: absolute;
     width: 17rem;
     left: 2rem;
     top: 2rem;
 }
+
 /*OPERADOR-INDUSTRIAL-TEXT*/
-.oferta-2 div h4{
+.oferta-2 div h4 {
     position: absolute;
     top: 10rem;
     left: 2rem;
 }
+
 /*MAQUINARIA-TEXT*/
-.maquinaria-2{
+.maquinaria-2 {
     position: absolute;
     color: #929292;
     left: 2rem;
     top: 12rem;
 }
+
 /*UBICACION-PNG*/
-.ubicacion-ol-2 img{
+.ubicacion-ol-2 img {
     position: relative;
     left: 2rem;
     top: 16.5rem;
 }
+
 /*SAN-LORENZO-TEXT*/
-.argentina-sanlorenzo-2{
+.argentina-sanlorenzo-2 {
     color: #929292;
     position: absolute;
     top: 16.9rem;
     left: 6rem;
 }
+
 /*CALENDARIO-PNG*/
-.calendario-2 img{
+.calendario-2 img {
     position: relative;
     left: 18rem;
     top: 14.4rem;
 }
+
 /*FECHA-TEXT*/
-.fecha-2{
+.fecha-2 {
     color: #929292;
     position: relative;
     top: 12.4rem;
     left: 22rem;
 }
+
 /*RELOJ-PNG*/
-.reloj-2 img{
+.reloj-2 img {
     position: relative;
     left: 50rem;
     top: 10.9rem;
 }
+
 /*FULL-TIME-TEXT*/
-.full-time-2{
+.full-time-2 {
     position: relative;
     color: #929292;
     left: 54rem;
     top: 9rem;
 }
+
 /*FLECHA-PNG*/
-.flecha-2 img{
+.flecha-2 img {
     position: absolute;
     left: 55.5rem;
     bottom: 16rem;
 }
+
 /*MAS-INFO-TEXT*/
-.mas-info-2{
+.mas-info-2 {
     position: absolute;
     color: #929292;
     left: 51rem;
     bottom: 16.4rem;
 }
+
 /*OFERTA-3*/
-.oferta-3{
-    grid-row: 3/4;
-    grid-column: 1/2;
-    /* margin-left: 29.6875rem;
-    margin-bottom: 40.625rem; */
-    /* position: relative; */
-    background-color: #D9D9D9;
-    width: 60rem;
-    height: 20rem;
-    border-radius: 3%;
-    /* margin-left: 29.6875rem;
-    margin-bottom: 40.625rem;
+.oferta-3 {
     position: relative;
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
-    border-radius: 3%; */
+    border-radius: 10px;
 }
+
 /*LOGO-JHONSCLEAN*/
-.oferta-3 figure img{
+.oferta-3 figure img {
     position: absolute;
     width: 17rem;
     left: 2rem;
     top: 2rem;
 }
+
 /*OPERADOR-INDUSTRIAL-TEXT*/
-.oferta-3 div h4{
+.oferta-3 div h4 {
     position: absolute;
     top: 10rem;
     left: 2rem;
 }
+
 /*MAQUINARIA-TEXT*/
-.maquinaria-3{
+.maquinaria-3 {
     position: absolute;
     color: #929292;
     left: 2rem;
     top: 12rem;
 }
+
 /*UBICACION-PNG*/
-.ubicacion-ol-3 img{
+.ubicacion-ol-3 img {
     position: relative;
     left: 2rem;
     top: 16.5rem;
 }
+
 /*SAN-LORENZO-TEXT*/
-.argentina-sanlorenzo-3{
+.argentina-sanlorenzo-3 {
     color: #929292;
     position: absolute;
     top: 16.9rem;
     left: 6rem;
 }
+
 /*CALENDARIO-PNG*/
-.calendario-3 img{
+.calendario-3 img {
     position: relative;
     left: 18rem;
     top: 14.4rem;
 }
+
 /*FECHA-TEXT*/
-.fecha-3{
+.fecha-3 {
     color: #929292;
     position: relative;
     top: 12.4rem;
     left: 22rem;
 }
+
 /*RELOJ-PNG*/
-.reloj-3 img{
+.reloj-3 img {
     position: relative;
     left: 50rem;
     top: 10.9rem;
 }
+
 /*FULL-TIME-TEXT*/
-.full-time-3{
+.full-time-3 {
     position: relative;
     color: #929292;
     left: 54rem;
     top: 9rem;
 }
+
 /*FLECHA-PNG*/
-.flecha-3 img{
+.flecha-3 img {
     position: absolute;
     left: 55.5rem;
     bottom: 16rem;
 }
+
 /*MAS-INFO-TEXT*/
-.mas-info-3{
+.mas-info-3 {
     position: absolute;
     color: #929292;
     left: 51rem;
     bottom: 16.4rem;
 }
+
 /*----------------------------------------------------------------------------*/
 /*TRABAJA CON NOSOTROS PAGE*/
 /*HEADER*/
-.wave-trabaja-cn svg{
+.wave-trabaja-cn svg {
     width: 100%;
     position: absolute;
     bottom: 0;
 }
-.navbar-trabaja-con-nos{
+
+.navbar-trabaja-con-nos {
     width: 100%;
     height: 50rem;
-    background: #373B44;  /* fallback for old browsers */
+    background: #373B44;
+    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(217, 89%, 61%, 0.39), #373B44), url(../assets/img/imgtrabajaconnos.jpg);
     background: linear-gradient(to right, hsla(217, 89%, 61%, 0.719), #373B44), url(../assets/img/imgtrabajaconnos.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
-}   
-.navbar li a{
+}
+
+.navbar li a {
     font-family: "jona-font";
 }
+
 /*MAIN*/
-.envianos-tu-cv{
+.envianos-tu-cv {
+    z-index: -1;
     display: flex;
     justify-content: center;
     height: 3rem;
@@ -889,38 +1093,49 @@ nav{
     color: #FFFFFF;
     opacity: 68%;
 }
-.envianos-tu-cv a{
+
+.envianos-tu-cv a {
     text-decoration: none;
     color: #FFFFFF;
 }
-.envianos-tu-cv a:hover{
+
+.envianos-tu-cv a:hover {
     color: cadetblue;
 }
+
 /*INFORMACIÓN*/
-.nuestro-equipo{
+.nuestro-equipo {
+    text-align: center;
+    margin: 0 1rem;
+    z-index: -1;
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    position: relative;
-    top: 12.5rem;
 }
-.parte-de-ne{
+
+.parte-de-ne {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
+    gap: 5rem;
     align-items: center;
     justify-content: space-evenly 6.25rem;
 }
+
 .p-unete {
-    width: 50rem;
-    position: relative;
-    top: 18.75rem;
+    margin: 0 1rem;
+    z-index: -1;
+    max-width: 700px;
+    text-align: center;
 }
-.circulos-tcn{
-    position: relative;
-    top: 31.25rem;
-    margin-bottom: 50rem;
+
+.circulos-tcn {
+    z-index: -1;
+    margin-bottom: 5rem;
 }
-.tcn-box{
+
+.tcn-box {
+    z-index: -1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -928,31 +1143,34 @@ nav{
     height: 3rem;
     width: 13rem;
     border-radius: 5%;
-    position: relative;
-    top: 25rem;
     background-color: #221EE0;
 }
-.tcn-box a{
+
+.tcn-box a {
     text-decoration: none;
     color: #FFFFFF;
 }
-.tcn-2{
-    position: relative;
-    top: 12.5rem;
+
+.tcn-2 {
+    margin: 0 1rem;
+    z-index: -1;
 }
-.tcn-box h4{
+
+.tcn-box h4 {
     color: #FFFFFF;
     text-align: center;
 }
+
 /*CIRCULO-FOTO*/
-.circulo-tcn{
+.circulo-tcn {
     position: absolute;
     height: 12.5rem;
     width: 12.5rem;
     background-color: #6F3838;
     border-radius: 100%;
 }
-.circulo-tcn-foto{
+
+.circulo-tcn-foto {
     position: relative;
     height: 12.5rem;
     width: 12.5rem;
@@ -963,18 +1181,21 @@ nav{
     background-position: center;
     border-radius: 100%;
 }
-.servicios-footer-container li{
+
+.servicios-footer-container li {
     height: auto;
 }
+
 /*----------------------------------------------------------------------------*/
 /*CONTACTO-PAGE*/
 /*HEADER*/
-.wave-contacto svg{
+.wave-contacto svg {
     position: absolute;
     width: 100%;
     bottom: 0;
 }
-.navbar-contacto{
+
+.navbar-contacto {
     height: 50rem;
     width: auto;
     position: relative;
@@ -982,38 +1203,45 @@ nav{
     background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: #1A2980;  /* fallback for old browsers */
+    background: #1A2980;
+    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(179, 69%, 48%, 0.637), #1A2980), url(../assets/img/contacto3.jpg);
     background: linear-gradient(to right, hsla(179, 69%, 48%, 0.603), #1A2980), url(../assets/img/contacto3.jpg);
 }
+
 /*MAIN*/
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
 }
-.main-contacto{
+
+.main-contacto {
     max-width: 78.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
-.flex-contacto{
+
+.flex-contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.flex-contacto div h4{
+
+.flex-contacto div h4 {
     top: 30rem;
 }
-.textos-comunicacion{
+
+.textos-comunicacion {
     top: 26.25rem;
     text-align: center;
     max-width: 70ch;
     padding: 1.875rem 0;
 }
-.contacto-comercial{
+
+.contacto-comercial {
     height: 3rem;
     width: 14rem;
     background-color: #D9D9D9;
@@ -1021,18 +1249,21 @@ nav{
     text-align: center;
     top: 12.5rem;
 }
+
 /*FORMULARIO*/
 /*DATOS PERSONALES*/
-.formulario-1{
+.formulario-1 {
     background-color: #45d4cdb6;
     padding: 2.5rem;
 }
-.formulario-1 form{
+
+.formulario-1 form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
-.datos-requeridos{
+
+.datos-requeridos {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1043,11 +1274,13 @@ nav{
     border: .0625rem solid rgb(164, 171, 172);
     border-radius: 5%;
 }
-.cuen-inp{
+
+.cuen-inp {
     width: 35rem;
     height: 1.5rem;
 }
-.enviar{
+
+.enviar {
     font-family: "jona-font";
     color: #FFFFFF;
     width: 10rem;
@@ -1055,140 +1288,202 @@ nav{
     background-color: #FF6B00;
     border-radius: 10%;
 }
+
 /*MAPA-SUCURSALES*/
-.nuestras-sucursales{
+.nuestras-sucursales {
     padding: 3.125rem;
 }
-.mapa iframe{
+
+.mapa iframe {
     max-width: 50rem;
     max-height: 31.25rem;
     background-color: #D9D9D9;
     text-align: center;
     margin-bottom: 18.75rem;
 }
-@media (max-width:1024px){
-    nav{
+
+@media (max-width:1024px) {
+    nav {
         width: 100%;
         height: 50rem;
-        background: #1488CC;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #1488CC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-size: contain;
         background-attachment: fixed;
         position: relative;
     }
-    html{
+
+    html {
         overflow-x: hidden;
     }
-    .logo-nav{
+
+    /* .logo-nav{
         position: relative;
         right: 12.5rem;
         bottom: 3.75rem;
-    }
-    .navbar{
+    } */
+    .navbar {
         display: flex;
         flex-direction: row;
         gap: .625rem;
         justify-content: center;
         margin-right: 75rem;
     }
-    .buscando-container{
+
+    .buscando-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-align: center;
-        width: 40.625rem;
-        left: 10rem;
         position: relative;
     }
-    .trabaja-container{
+
+    .trabaja-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-align: center;
-        width: 40.625rem;
-        left: 5.625rem;
         position: relative;
     }
-    .posiciona{
-        width: 25rem;
-        left: 6.25rem;
+
+    .posiciona {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .posiciona h3{
-        width: 34.375rem;
-    }
-    .servicios-footer-container{
+
+    .servicios-footer-container {
         display: flex;
         justify-content: center;
     }
-    .servicios-footer li a{
+
+    .servicios-footer li a {
         position: unset;
     }
-    .servicios-footer-container ul{
+
+    .servicios-footer-container ul {
         list-style: none;
     }
-    .derechos{
+
+    .derechos {
         position: unset;
     }
+
     .contacto-f {
         position: unset;
     }
-    .gmail{
+
+    .gmail {
         position: unset;
     }
-    .redes-footer-container{
+
+    .redes-footer-container {
         display: unset;
         position: unset;
         justify-content: unset;
         right: unset;
         bottom: unset;
     }
-    .f-logo{
+
+    .f-logo {
         position: unset;
         display: flex;
         flex-direction: row;
     }
-    .container-contacto-f{
+
+    .container-contacto-f {
         margin-bottom: 15px;
     }
-    .prueba-logo{
+
+    .prueba-logo {
+        flex-wrap: wrap;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
         height: calc(100% - 16px);
     }
-    .cualquiera{
+
+    .cualquiera {
         display: contents;
     }
-    .icono{
+
+    .icono {
         margin: 0px 5px;
     }
 }
-@media (max-width: 768px){
-    nav{
+
+@media (max-width: 768px) {
+    .circulos-servicios {
+        position: unset;
+        z-index: -1;
+    }
+
+    .buscando-container {
+        z-index: -1;
+    }
+
+    .trabaja-container {
+        z-index: -1;
+    }
+
+    .contacto-container div {
+        z-index: -1;
+    }
+
+    nav {
+        display: none;
+        background: none;
+    }
+
+    .nav-hamb {
+        display: flex;
+        background: #1A2980;
+        background: -webkit-linear-gradient(to left, #26D0CE, #1A2980);
+        background: linear-gradient(to left, #26D0CE, #1A2980);
+    }
+
+    .calidad {
+        display: none;
+    }
+
+    .navbar-container2 {
+        display: none;
+    }
+
+    .menu-desplegable {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    nav {
         background-repeat: no-repeat;
         height: 34.375rem;
     }
-    .logo-nav img{
+
+    .logo-nav img {
         left: 210px;
         top: -10px;
         right: 0px;
         bottom: 0px;
     }
-    .navbar-container{
+
+    .navbar-container {
         display: flex;
         justify-content: center;
     }
-    .calidad{
-        position: unset;
-        top: 0;
-        margin-top: 2.75rem;
+
+    .calidad {
+        width: 37.5rem;
     }
 }
-
-
