@@ -1242,6 +1242,9 @@ nav {
 }
 
 .contacto-comercial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3rem;
     width: 14rem;
     background-color: #D9D9D9;
@@ -1293,7 +1296,9 @@ nav {
 .nuestras-sucursales {
     padding: 3.125rem;
 }
-
+.mapa{
+    margin-bottom: 5rem;
+}
 .mapa iframe {
     max-width: 50rem;
     max-height: 31.25rem;
