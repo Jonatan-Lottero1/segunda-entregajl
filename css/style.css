@@ -13,6 +13,7 @@
 }
 
 header {
+  position: relative;
   margin-bottom: 3rem;
 }
 header .calidad {
@@ -73,7 +74,7 @@ header nav .logo-nav img {
 }
 header nav .waves {
   position: absolute;
-  bottom: 142px;
+  bottom: 0;
   width: 100%;
 }
 

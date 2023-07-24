@@ -1,4 +1,5 @@
 header{
+    position: relative;
     margin-bottom: 3rem;
     .calidad{
         display: flex;
@@ -58,7 +59,7 @@ header{
         }
         .waves{
             position: absolute;
-            bottom: 142px;
+            bottom: 0;
             width: 100%;
         }
     }
