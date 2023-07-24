@@ -151,7 +151,7 @@ nav {
     position: relative;
 }
 
-.navbar li {
+.navbar-custom li {
     position: relative;
     display: inline;
     padding: 1rem;
@@ -160,14 +160,14 @@ nav {
     top: 1.25rem;
 }
 
-.navbar li a {
+.navbar-custom li a {
     text-align: center;
     position: relative;
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.navbar li a:hover {
+.navbar-custom li a:hover {
     color: #ff4800;
 }
 
@@ -1070,7 +1070,7 @@ nav {
     position: relative;
 }
 
-.navbar li a {
+.navbar-custom li a {
     font-family: "jona-font";
 }
 
@@ -1235,54 +1235,6 @@ nav {
     padding: 1.875rem 0;
 }
 
-.contacto-comercial {
-    height: 3rem;
-    width: 14rem;
-    background-color: #D9D9D9;
-    border-radius: 10%;
-    text-align: center;
-    top: 12.5rem;
-}
-
-/*FORMULARIO*/
-/*DATOS PERSONALES*/
-.formulario-1 {
-    background-color: #45d4cdb6;
-    padding: 2.5rem;
-}
-
-.formulario-1 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.datos-requeridos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: #D9D9D9;
-    padding: .9375rem;
-    text-align: center;
-    border: .0625rem solid rgb(164, 171, 172);
-    border-radius: 5%;
-}
-
-.cuen-inp {
-    width: 35rem;
-    height: 1.5rem;
-}
-
-.enviar {
-    font-family: "jona-font";
-    color: #FFFFFF;
-    width: 10rem;
-    height: 2rem;
-    background-color: #FF6B00;
-    border-radius: 10%;
-}
-
 /*MAPA-SUCURSALES*/
 .nuestras-sucursales {
     padding: 3.125rem;
@@ -1311,7 +1263,7 @@ nav {
     html {
         overflow-x: hidden;
     }
-    .navbar {
+    .navbar-custom {
         display: flex;
         flex-direction: row;
         gap: .625rem;
@@ -1446,7 +1398,7 @@ nav {
         justify-content: space-between;
     }
 
-    .navbar {
+    .navbar-custom {
         display: none;
     }
 
