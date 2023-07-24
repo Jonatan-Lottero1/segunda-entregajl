@@ -150,6 +150,9 @@ nav {
     background-attachment: fixed;
     position: relative;
 }
+.navbar-custom{
+    min-width: max-content;
+}
 
 .navbar-custom li {
     position: relative;
