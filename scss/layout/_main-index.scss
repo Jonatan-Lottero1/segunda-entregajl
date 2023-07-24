@@ -1,0 +1,194 @@
+.main-index{
+    .quienes-somos{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 37.5rem;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 5rem;
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+
+/*-------------CIRCLE AND TEXT-1----------------*/
+
+    .servicios-container{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5rem;
+        .circulos-servicios{
+            margin-right: 2rem;
+            .circulo-s{
+                position: absolute;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-color: $circulo-s;
+                border-radius: 100%;
+            }
+            .circulo-s2{
+                position: relative;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-image: url(../assets/img/nuestrosservicios.jpg);
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
+                overflow: hidden;
+                left: 1.875rem;
+                top: .625rem;
+            }
+        }
+        .tenemos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 56.25rem;
+            margin: 1rem;
+            h3{
+                color: rgb(53, 53, 53);
+                text-align: center;
+            }
+            p{
+                max-width: 25rem;
+            }
+        }
+    }
+
+/*-------------CIRCLE AND TEXT-2----------------*/
+
+    .buscando-container{
+        flex-wrap: wrap;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .buscando{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            h3{
+                color: rgb(53, 53, 53)
+            }
+            p{
+                max-width: 25rem;
+            }
+        }
+        .circulos-buscando{
+            margin-left: 2rem;
+            .circulo-o{
+                position: absolute;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-color: $circulo-o;
+                border-radius: 100%;
+            }
+            .circulo-o2{
+                position: relative;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-image: url(../assets/img/ofertaslaborales.jpg);
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
+                overflow: hidden;
+                right: 1.875rem;
+                top: .625rem;
+            }
+            
+        }
+        
+    }
+
+    /*-------------CIRCLE AND TEXT-3------------*/
+
+    .trabaja-container{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+        .circulos-trabaja{
+            margin-right: 2rem;
+            .circulo-t{
+                position: absolute;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-color: $circulo-t;
+                border-radius: 100%;
+            }
+            .circulo-t2{
+                position: relative;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-image: url(../assets/img/trabajaconnos.jpg);
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
+                overflow: hidden;
+                left: 1.875rem;
+                top: .625rem;
+            }
+        }
+    }
+    .posiciona{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3{
+            color: rgb(53, 53, 53)
+        }
+        p{
+            max-width: 25rem;
+        }
+    }
+    .contacto-container{
+        margin-bottom: 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        .circulos-contacto{
+            .circulo-c{
+                position: absolute;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-color: $circulo-c;
+                border-radius: 100%
+            }
+            .circulo-c2{
+                position: relative;
+                height: 12.5rem;
+                width: 12.5rem;
+                background-image: url(../assets/img/contactus.jpg);
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
+                overflow: hidden;
+                left: 1.875rem;
+                top: .625rem;
+            }
+        }
+        .contact-us{
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: #f44336;
+            margin-left: 1.5rem;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+                &:hover{
+                    color: $circulo-c;
+                }
+            }
+        }
+    }
+}

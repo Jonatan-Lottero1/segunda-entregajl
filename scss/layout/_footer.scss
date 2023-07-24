@@ -1,0 +1,46 @@
+.footer{
+    height: 31.25rem;
+    background-color: $footer-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .f-logo{
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+    .redes-footer-container{
+        ul{
+            list-style-type: none;
+            display: flex;
+            gap: 1.5rem;
+            margin-left: -1.5rem;
+        }
+    }
+    .servicios-footer-container{
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: $white;
+                &:hover{
+                    color: $hovers;
+                }
+            }
+        }
+    }
+    .prueba-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13rem;
+    }
+    .container-contacto-f{
+        color: $white;
+    }
+}
+.derechos{
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    color: $white;
+}
