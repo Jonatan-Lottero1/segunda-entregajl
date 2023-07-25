@@ -1267,12 +1267,9 @@ nav {
         flex-direction: row;
         gap: .625rem;
         justify-content: center;
-        margin-right: 75rem;
-    }
-    .navbar-custom > li{
+        margin-left: -75rem;
         min-width: max-content;
     }
-
     .buscando-container {
         display: flex;
         flex-direction: row;
