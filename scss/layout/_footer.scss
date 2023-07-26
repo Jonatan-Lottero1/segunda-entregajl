@@ -1,46 +1,64 @@
-.footer{
+.footer {
+    @include flex (row, center, center, wrap);
     height: 31.25rem;
     background-color: $footer-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .f-logo{
+    position: relative;
+
+    .f-logo {
         width: 12.5rem;
         height: 12.5rem;
     }
-    .redes-footer-container{
-        ul{
+
+    .redes-footer-container {
+        ul {
             list-style-type: none;
             display: flex;
-            gap: 1.5rem;
-            margin-left: -1.5rem;
+            justify-content: space-between;
+            margin-top: 1rem;
         }
     }
-    .servicios-footer-container{
-        li{
+
+    .servicios-footer-container {
+        .servicios-footer{
+            font-size: 1rem;
+        }
+        li {
             list-style-type: none;
-            a{
+
+            a {
                 text-decoration: none;
                 color: $white;
-                &:hover{
+
+                &:hover {
                     color: $hovers;
                 }
             }
         }
     }
-    .prueba-logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    .prueba-logo {
+        @include flex (row, center, center, wrap);
         gap: 13rem;
     }
-    .container-contacto-f{
+
+    .container-contacto-f {
         color: $white;
+        .contacto-f{
+            font-size: 1.75rem;
+            font-weight: normal;
+        }
+        .gmail{
+            font-size: 1.25rem;
+            font-weight: normal;
+        }
     }
 }
-.derechos{
-    display: flex;
-    justify-content: center;
-    margin-top: -2rem;
+
+.derechos {
+    @include flex (row, center, unset, wrap);
+    position: absolute;
     color: $white;
+    bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.25rem;
 }

@@ -1,10 +1,8 @@
 .main-index{
     .quienes-somos{
-        display: flex;
-        flex-direction: column;
+        @include flex (column,unset,center,wrap);
         text-align: center;
         max-width: 37.5rem;
-        align-items: center;
         margin: auto;
         margin-bottom: 5rem;
         h2{
@@ -15,11 +13,7 @@
 /*-------------CIRCLE AND TEXT-1----------------*/
 
     .servicios-container{
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex (row,center,center,wrap);
         margin-bottom: 5rem;
         .circulos-servicios{
             margin-right: 2rem;
@@ -44,9 +38,7 @@
             }
         }
         .tenemos{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex (column,unset,center,wrap);
             text-align: center;
             max-width: 56.25rem;
             margin: 1rem;
@@ -109,10 +101,7 @@
     /*-------------CIRCLE AND TEXT-3------------*/
 
     .trabaja-container{
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex (row,center,center,wrap);
         margin-bottom: 5rem;
         .circulos-trabaja{
             margin-right: 2rem;
@@ -138,9 +127,7 @@
         }
     }
     .posiciona{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex (column,unset,center,unset);
         text-align: center;
         h3{
             color: rgb(53, 53, 53)
@@ -150,11 +137,8 @@
         }
     }
     .contacto-container{
+        @include flex (column,center,center,unset);
         margin-bottom: 13rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 32px;
         .circulos-contacto{
             .circulo-c{
