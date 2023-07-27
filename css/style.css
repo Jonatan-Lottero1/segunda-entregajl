@@ -433,7 +433,45 @@ header nav .waves {
   text-align: center;
 }
 
-.footer {
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-container .main-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 78.125rem;
+}
+.main-container .main-contacto .flex-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
+}
+.main-container .main-contacto .flex-contacto .textos-comunicacion {
+  text-align: center;
+  max-width: 70ch;
+  padding: 1.875rem 0;
+}
+.main-container .main-contacto .flex-contacto .nuestras-sucursales {
+  padding: 3.125rem;
+}
+.main-container .main-contacto .flex-contacto .mapa {
+  margin-bottom: 10rem;
+}
+
+.flex-contacto div h4 {
+  top: 30rem;
+}
+
+.footer-global {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -443,30 +481,30 @@ header nav .waves {
   background-color: #181445;
   position: relative;
 }
-.footer .f-logo {
+.footer-global .f-logo {
   width: 12.5rem;
   height: 12.5rem;
 }
-.footer .redes-footer-container ul {
+.footer-global .redes-footer-container ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
-.footer .servicios-footer-container .servicios-footer {
+.footer-global .servicios-footer-container .servicios-footer {
   font-size: 1rem;
 }
-.footer .servicios-footer-container li {
+.footer-global .servicios-footer-container li {
   list-style-type: none;
 }
-.footer .servicios-footer-container li a {
+.footer-global .servicios-footer-container li a {
   text-decoration: none;
   color: #ffffff;
 }
-.footer .servicios-footer-container li a:hover {
+.footer-global .servicios-footer-container li a:hover {
   color: #ff4800;
 }
-.footer .prueba-logo {
+.footer-global .prueba-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -474,14 +512,14 @@ header nav .waves {
   flex-wrap: wrap;
   gap: 13rem;
 }
-.footer .container-contacto-f {
+.footer-global .container-contacto-f {
   color: #ffffff;
 }
-.footer .container-contacto-f .contacto-f {
+.footer-global .container-contacto-f .contacto-f {
   font-size: 1.75rem;
   font-weight: normal;
 }
-.footer .container-contacto-f .gmail {
+.footer-global .container-contacto-f .gmail {
   font-size: 1.25rem;
   font-weight: normal;
 }

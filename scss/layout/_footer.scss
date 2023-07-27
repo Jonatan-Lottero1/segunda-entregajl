@@ -1,4 +1,4 @@
-.footer {
+.footer-global {
     @include flex (row, center, center, wrap);
     height: 31.25rem;
     background-color: $footer-color;
