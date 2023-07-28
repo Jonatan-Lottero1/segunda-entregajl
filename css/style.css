@@ -31,7 +31,7 @@ header .calidad p {
   color: #ffffff;
   font-size: 1.5rem;
 }
-header nav {
+header .navbar-index {
   width: 100%;
   height: 50rem;
   background: #1488CC;
@@ -44,10 +44,10 @@ header nav {
   background-size: cover;
   background-attachment: fixed;
 }
-header nav .navbar-container {
+header .navbar-index .navbar-container {
   margin-top: -10rem;
 }
-header nav .navbar {
+header .navbar-index .navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,25 +55,25 @@ header nav .navbar {
   flex-wrap: wrap;
   gap: 2rem;
 }
-header nav .navbar li {
+header .navbar-index .navbar li {
   margin-top: 2rem;
   list-style-type: none;
 }
-header nav .navbar li a {
+header .navbar-index .navbar li a {
   text-decoration: none;
   color: #ffffff;
 }
-header nav .navbar li a:hover {
+header .navbar-index .navbar li a:hover {
   color: #ff4800;
 }
-header nav .logo-nav {
+header .navbar-index .logo-nav {
   padding: 2rem;
 }
-header nav .logo-nav img {
+header .navbar-index .logo-nav img {
   height: 9.25rem;
   width: 21.5rem;
 }
-header nav .waves {
+header .navbar-index .waves {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -98,6 +98,7 @@ header nav .waves {
   max-width: 37.5rem;
   margin: auto;
   margin-bottom: 5rem;
+  padding: 1rem;
 }
 .main-index .quienes-somos h2 {
   margin-bottom: 2rem;
@@ -317,7 +318,7 @@ header nav .waves {
   flex-wrap: wrap;
   background-color: #D9D9D9;
   width: 30rem;
-  height: 15rem;
+  height: 16rem;
   text-align: center;
   gap: 1rem;
   padding: 1rem;
@@ -351,8 +352,6 @@ header nav .waves {
   justify-content: unset;
   align-items: center;
   flex-wrap: wrap;
-  position: absolute;
-  right: 2rem;
   gap: 1.5rem;
 }
 .main-ol .grids .ofertas .container-lyu {
@@ -363,6 +362,26 @@ header nav .waves {
   flex-wrap: wrap;
   gap: 1.7rem;
   margin-left: 2rem;
+}
+.main-ol .grids .ofertas .container-lyu .lyu1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
+  gap: 1.5rem;
+}
+.main-ol .grids .ofertas .lyu2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-ol .grids .ofertas .lyu2 .mas-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 2rem;
 }
 .main-ol .grids .ofertas .lyu {
   display: flex;
@@ -386,9 +405,9 @@ header nav .waves {
 .main-tcn .parte-de-ne {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: unset;
   gap: 5rem;
   margin-top: 3rem;
   text-align: center;
@@ -399,16 +418,19 @@ header nav .waves {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
   background-color: #D9D9D9;
-  width: 40rem;
-  height: 20rem;
+  width: 70%;
+  height: 30rem;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 .main-tcn .parte-de-ne .cards-servicios2 p {
   padding: 2rem;
 }
 .main-tcn .parte-de-ne .nuestro-equipo {
   font-size: 32px;
+  margin: 1rem;
 }
 .main-tcn .parte-de-ne .envianos-tu-cv {
   display: flex;
@@ -462,13 +484,17 @@ header nav .waves {
 .main-container .main-contacto .flex-contacto .textos-comunicacion {
   text-align: center;
   max-width: 70ch;
-  padding: 1.875rem 0;
+  padding: 1.875rem 1rem;
 }
 .main-container .main-contacto .flex-contacto .nuestras-sucursales {
   padding: 3.125rem;
 }
 .main-container .main-contacto .flex-contacto .mapa {
   margin-bottom: 10rem;
+}
+.main-container .main-contacto .flex-contacto h2 {
+  text-align: center;
+  padding: 1rem;
 }
 
 .flex-contacto div h4 {
@@ -562,6 +588,126 @@ header nav .waves {
   .footer-global .prueba-logo {
     gap: 7rem;
   }
+  .main-ol .grids .ofertas {
+    width: 35rem;
+  }
+  .main-ol .grids .ofertas .lyu-r {
+    gap: unset;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar-index {
+    display: none;
+  }
+  header .menu-desplegable {
+    display: flex;
+    justify-content: space-between;
+    background: #1A2980;
+    background: -webkit-linear-gradient(to left, #26D0CE, #1A2980);
+    background: linear-gradient(to left, #26D0CE, #1A2980);
+    box-shadow: 1px 1px 5px 0px grey;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  header .menu-desplegable a {
+    text-decoration: none;
+  }
+  header .menu-desplegable .menu {
+    list-style: none;
+  }
+  header .menu-desplegable .menu a {
+    display: block;
+    padding: 1.875rem;
+    color: white;
+  }
+  header .menu-desplegable .menu a:hover {
+    background-color: #9F1B09;
+  }
+  header .menu-desplegable .logo-mq img {
+    width: 220px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  header .menu-desplegable .nav-hamb {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #1A2980;
+    background: -webkit-linear-gradient(to left, #26D0CE, #1A2980);
+    background: linear-gradient(to left, #26D0CE, #1A2980);
+    overflow-x: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  header .menu-desplegable .hamb {
+    z-index: 1;
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+  }
+  header .menu-desplegable .hamb-line {
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  }
+  header .menu-desplegable .hamb-line::before, header .menu-desplegable .hamb-line::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    top: -5px;
+  }
+  header .menu-desplegable .hamb-line::before {
+    top: 5px;
+  }
+  header .menu-desplegable .side-menu {
+    display: none;
+  }
+  header .menu-desplegable .side-menu:checked ~ .nav-hamb {
+    max-height: 100%;
+  }
+  header .menu-desplegable .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  header .menu-desplegable .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header .menu-desplegable .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  main .circulos-servicios {
+    z-index: -1;
+  }
+  main .circulos-buscando {
+    z-index: -1;
+  }
+  main .circulos-trabaja {
+    z-index: -1;
+  }
+  main .circulos-contacto {
+    z-index: -1;
+  }
+  .main-ol .grids .ofertas {
+    z-index: -1;
+    width: 25rem;
+    height: 25rem;
+  }
+  .main-ol .grids .ofertas .logo-negro {
+    width: 10rem;
+  }
+  .main-ol .grids .ofertas .container-lyu .lyu1 {
+    flex-direction: column;
+  }
 }
 @media (max-width: 480px) {
   .footer-global .prueba-logo {
@@ -570,6 +716,21 @@ header nav .waves {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+  }
+}
+@media (max-width: 425px) {
+  .footer-global .derechos {
+    font-size: 12px;
+  }
+  .main-ol .grids .ofertas {
+    height: 26rem;
+    width: 17rem;
+  }
+  .main-ol .grids .ofertas .container-lyu .lyu2 {
+    flex-direction: column;
+  }
+  .main-ol .grids .ofertas .container-lyu .lyu2 .mas-info {
+    justify-content: unset;
   }
 }
 

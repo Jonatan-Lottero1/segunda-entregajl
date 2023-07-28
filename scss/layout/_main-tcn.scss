@@ -1,39 +1,50 @@
-.main-tcn{
-    .parte-de-ne{
-        @include flex (column,space-evenly,center,wrap);
+.main-tcn {
+    .parte-de-ne {
+        @include flex (column,center,center,unset);
         gap: 5rem;
         margin-top: 3rem;
         text-align: center;
-        .cards-servicios2{
+
+        .cards-servicios2 {
             @include flex (column,center,center,wrap);
-            gap: 2rem;
             background-color: #D9D9D9;
-            width: 40rem;
-            height: 20rem;
-            p{
+            width: 70%;
+            height: 30rem;
+            text-align: center;
+            gap: 1rem;
+            padding: 1rem;
+            
+
+            p {
                 padding: 2rem;
             }
         }
-        .nuestro-equipo{
+
+        .nuestro-equipo {
             font-size: 32px;
+            margin: 1rem;
         }
-        .envianos-tu-cv{
-            @include flex (row,center,unset,wrap);
+
+        .envianos-tu-cv {
+            @include flex (row, center, unset, wrap);
             text-align: center;
             width: 11rem;
             height: 3rem;
             border-radius: 5px;
             background-color: #9F1B09;
             margin: 5rem;
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 text-decoration: none;
                 color: #FFFFFF;
-                &:hover{
+
+                &:hover {
                     color: cadetblue;
                 }
-                h3{
+
+                h3 {
                     font-weight: normal;
                     text-align: center;
                 }

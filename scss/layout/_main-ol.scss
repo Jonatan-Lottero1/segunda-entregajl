@@ -23,8 +23,6 @@
     
             .lyu-r {
                 @include flex (row, unset, center, wrap);
-                position: absolute;
-                right: 2rem;
                 gap: 1.5rem;
             }
     
@@ -32,8 +30,24 @@
                 @include flex (column, center, unset, wrap);
                 gap: 1.7rem;
                 margin-left: 2rem;
+                .lyu1{
+                    @include flex (row,unset,unset,unset);
+                    gap: 1.5rem;
+                }
             }
     
+            .lyu2{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .mas-info{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-right: 2rem;
+                }
+            }
             .lyu {
                 @include flex (row, unset, center, wrap);
                 gap: 1.5rem;
