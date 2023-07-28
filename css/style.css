@@ -20,7 +20,7 @@ header .calidad {
   max-width: 31.25rem;
   text-align: center;
   margin: auto;
-  margin-top: -3.125rem;
+  margin-top: 10rem;
 }
 header .calidad h1 {
   color: #f18130;
@@ -44,6 +44,9 @@ header nav {
   background-size: cover;
   background-attachment: fixed;
 }
+header nav .navbar-container {
+  margin-top: -10rem;
+}
 header nav .navbar {
   display: flex;
   flex-direction: row;
@@ -53,7 +56,7 @@ header nav .navbar {
   gap: 2rem;
 }
 header nav .navbar li {
-  margin-top: 1rem;
+  margin-top: 2rem;
   list-style-type: none;
 }
 header nav .navbar li a {
@@ -64,12 +67,11 @@ header nav .navbar li a:hover {
   color: #ff4800;
 }
 header nav .logo-nav {
-  margin-top: -2rem;
-  margin-left: 2rem;
+  padding: 2rem;
 }
 header nav .logo-nav img {
-  height: 12.5rem;
-  width: 25rem;
+  height: 9.25rem;
+  width: 21.5rem;
 }
 header nav .waves {
   position: absolute;
@@ -138,7 +140,7 @@ header nav .waves {
   flex-wrap: wrap;
   text-align: center;
   max-width: 56.25rem;
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
 .main-index .servicios-container .tenemos h3 {
   color: rgb(53, 53, 53);
@@ -148,7 +150,7 @@ header nav .waves {
   max-width: 25rem;
 }
 .main-index .buscando-container {
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   margin-bottom: 5rem;
   display: flex;
   justify-content: center;
@@ -159,6 +161,7 @@ header nav .waves {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 1rem 2rem;
 }
 .main-index .buscando-container .buscando h3 {
   color: rgb(53, 53, 53);
@@ -225,6 +228,7 @@ header nav .waves {
   align-items: center;
   flex-wrap: unset;
   text-align: center;
+  margin: 1rem 2rem;
 }
 .main-index .posiciona h3 {
   color: rgb(53, 53, 53);
@@ -511,6 +515,7 @@ header nav .waves {
   align-items: center;
   flex-wrap: wrap;
   gap: 13rem;
+  padding: 1rem;
 }
 .footer-global .container-contacto-f {
   color: #ffffff;
@@ -535,6 +540,37 @@ header nav .waves {
   bottom: 1rem;
   font-weight: normal;
   font-size: 1.25rem;
+}
+
+@media (max-width: 1600px) {
+  .navbar-index .responsive-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+  }
+  .navbar-index .calidad {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .footer-global {
+    height: 40rem;
+  }
+  .footer-global .prueba-logo {
+    gap: 7rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-global .prueba-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

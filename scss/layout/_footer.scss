@@ -39,6 +39,7 @@
     .prueba-logo {
         @include flex (row, center, center, wrap);
         gap: 13rem;
+        padding: 1rem;
     }
 
     .container-contacto-f {

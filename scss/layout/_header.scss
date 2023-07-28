@@ -5,7 +5,7 @@ header{
         max-width: 31.25rem;
         text-align: center;
         margin: auto;
-        margin-top: -3.125rem;
+        margin-top: 10rem;
         h1{
             color: $keywords;
             font-size: 4rem;
@@ -29,11 +29,14 @@ header{
         background-size: cover;
         background-attachment: fixed;
         // position: relative;
+        .navbar-container{
+            margin-top: -10rem
+        }
         .navbar{
             @include flex (row,center,unset,wrap);
             gap: 2rem;
             li{
-                margin-top: 1rem;
+                margin-top: 2rem;
                 list-style-type: none;
                 a{
                     text-decoration: none;
@@ -45,11 +48,10 @@ header{
             }
         }
         .logo-nav{
-            margin-top: -2rem;
-            margin-left: 2rem;
+            padding: 2rem;
             img{
-                height: 12.5rem;
-                width: 25rem;
+                height: 9.25rem;
+                width: 21.5rem;
             }
         }
         .waves{
