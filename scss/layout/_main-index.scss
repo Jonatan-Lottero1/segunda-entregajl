@@ -55,7 +55,12 @@
 
 /*-------------CIRCLE AND TEXT-2----------------*/
 
-    .buscando-container{
+.scale-up-center {
+	-webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+    .buscando-container {
         flex-wrap: wrap-reverse;
         margin-bottom: 5rem;
         display: flex;
@@ -165,6 +170,10 @@
             }
         }
         .contact-us{
+            transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
+            &:hover{
+                transform: scale(1.1);
+            }
             padding: 0.5rem 1rem;
             border-radius: 5px;
             background-color: #f44336;
@@ -179,3 +188,25 @@
         }
     }
 }
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  

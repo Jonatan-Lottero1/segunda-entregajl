@@ -16,6 +16,10 @@ header {
   position: relative;
   margin-bottom: 3rem;
 }
+header .scale-up-center {
+  -webkit-animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
 header .calidad {
   max-width: 31.25rem;
   text-align: center;
@@ -56,8 +60,12 @@ header .navbar-index .navbar {
   gap: 2rem;
 }
 header .navbar-index .navbar li {
+  transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
   margin-top: 2rem;
   list-style-type: none;
+}
+header .navbar-index .navbar li:hover {
+  transform: scale(1.1);
 }
 header .navbar-index .navbar li a {
   text-decoration: none;
@@ -65,6 +73,7 @@ header .navbar-index .navbar li a {
 }
 header .navbar-index .navbar li a:hover {
   color: #ff4800;
+  text-shadow: 0px 0px 5px;
 }
 header .navbar-index .logo-nav {
   padding: 2rem;
@@ -83,6 +92,26 @@ header .navbar-index .waves {
   display: none;
 }
 
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .main-index {
   /*-------------CIRCLE AND TEXT-1----------------*/
   /*-------------CIRCLE AND TEXT-2----------------*/
@@ -149,6 +178,10 @@ header .navbar-index .waves {
 }
 .main-index .servicios-container .tenemos p {
   max-width: 25rem;
+}
+.main-index .scale-up-center {
+  -webkit-animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .main-index .buscando-container {
   flex-wrap: wrap-reverse;
@@ -266,10 +299,14 @@ header .navbar-index .waves {
   top: 0.625rem;
 }
 .main-index .contacto-container .contact-us {
+  transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   background-color: #f44336;
   margin-left: 1.5rem;
+}
+.main-index .contacto-container .contact-us:hover {
+  transform: scale(1.1);
 }
 .main-index .contacto-container .contact-us a {
   text-decoration: none;
@@ -279,6 +316,26 @@ header .navbar-index .waves {
   color: #45D4CC;
 }
 
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .main h3 {
   text-align: center;
 }
@@ -311,6 +368,7 @@ header .navbar-index .waves {
   margin-bottom: 10rem;
 }
 .main .cards-servicios {
+  transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -322,6 +380,9 @@ header .navbar-index .waves {
   text-align: center;
   gap: 1rem;
   padding: 1rem;
+}
+.main .cards-servicios:hover {
+  transform: scale(1.1);
 }
 
 .main-ol h3 {
@@ -433,6 +494,7 @@ header .navbar-index .waves {
   margin: 1rem;
 }
 .main-tcn .parte-de-ne .envianos-tu-cv {
+  transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -444,6 +506,9 @@ header .navbar-index .waves {
   border-radius: 5px;
   background-color: #9F1B09;
   margin: 5rem;
+}
+.main-tcn .parte-de-ne .envianos-tu-cv:hover {
+  transform: scale(1.1);
 }
 .main-tcn .parte-de-ne .envianos-tu-cv a {
   display: flex;
@@ -515,21 +580,32 @@ header .navbar-index .waves {
   width: 12.5rem;
   height: 12.5rem;
 }
+.footer-global .redes-footer-container {
+  padding-left: 0px !important;
+}
 .footer-global .redes-footer-container ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  padding-left: 0px !important;
 }
 .footer-global .servicios-footer-container .servicios-footer {
   font-size: 1rem;
 }
 .footer-global .servicios-footer-container li {
+  transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
   list-style-type: none;
+}
+.footer-global .servicios-footer-container li:hover {
+  transform: scale(1.1);
 }
 .footer-global .servicios-footer-container li a {
   text-decoration: none;
   color: #ffffff;
+}
+.footer-global .servicios-footer-container li ahover {
+  text-shadow: 0px 0px 5px;
 }
 .footer-global .servicios-footer-container li a:hover {
   color: #ff4800;
@@ -600,6 +676,7 @@ header .navbar-index .waves {
     display: none;
   }
   header .menu-desplegable {
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     background: #1A2980;
@@ -672,7 +749,7 @@ header .navbar-index .waves {
     display: none;
   }
   header .menu-desplegable .side-menu:checked ~ .nav-hamb {
-    max-height: 100%;
+    max-height: 50%;
   }
   header .menu-desplegable .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
@@ -685,20 +762,7 @@ header .navbar-index .waves {
     transform: rotate(45deg);
     top: 0;
   }
-  main .circulos-servicios {
-    z-index: -1;
-  }
-  main .circulos-buscando {
-    z-index: -1;
-  }
-  main .circulos-trabaja {
-    z-index: -1;
-  }
-  main .circulos-contacto {
-    z-index: -1;
-  }
   .main-ol .grids .ofertas {
-    z-index: -1;
     width: 25rem;
     height: 25rem;
   }
