@@ -339,7 +339,7 @@ header .navbar-index .waves {
 .main h3 {
   text-align: center;
 }
-.main .card-column1 {
+.main .card-column1, .main .card-column3, .main .card-column2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -347,25 +347,6 @@ header .navbar-index .waves {
   flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem;
-}
-.main .card-column2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem;
-}
-.main .card-column3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem;
-  margin-bottom: 10rem;
 }
 .main .cards-servicios {
   transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
@@ -771,6 +752,15 @@ header .navbar-index .waves {
   }
   .main-ol .grids .ofertas .container-lyu .lyu1 {
     flex-direction: column;
+  }
+}
+@media (max-width: 509px) {
+  .footer-global .prueba-logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3rem !important;
   }
 }
 @media (max-width: 480px) {
