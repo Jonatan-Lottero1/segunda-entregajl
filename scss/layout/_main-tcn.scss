@@ -1,19 +1,19 @@
 .main-tcn {
     .parte-de-ne {
-        @include flex (column,center,center,unset);
+        @include flex (column, center, center, unset);
         gap: 5rem;
         margin-top: 3rem;
         text-align: center;
 
         .cards-servicios2 {
-            @include flex (column,center,center,wrap);
+            @include flex (column, center, center, wrap);
             background-color: #D9D9D9;
             width: 70%;
             height: 30rem;
             text-align: center;
             gap: 1rem;
             padding: 1rem;
-            
+
 
             p {
                 padding: 2rem;
@@ -27,9 +27,11 @@
 
         .envianos-tu-cv {
             transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
             }
+
             @include flex (row, center, unset, wrap);
             text-align: center;
             width: 11rem;

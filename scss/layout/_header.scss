@@ -1,95 +1,110 @@
-header{
+header {
     position: relative;
     margin-bottom: 3rem;
+
     .scale-up-center {
         -webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
-    .calidad{
+
+    .calidad {
         max-width: 31.25rem;
         text-align: center;
         margin: auto;
         margin-top: 10rem;
-        h1{
+
+        h1 {
             color: $keywords;
             font-size: 4rem;
             font-weight: bold;
         }
-        p{
+
+        p {
             color: $white;
             font-size: 1.5rem;
         }
     }
+
     .navbar-index {
         width: 100%;
         height: 50rem;
         background: #1488CC;
-        /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav.jpg);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background-size: cover;
         background-attachment: fixed;
-        .navbar-container{
+
+        .navbar-container {
             margin-top: -10rem
         }
-        .navbar{
-            @include flex (row,center,unset,wrap);
+
+        .navbar {
+            @include flex (row, center, unset, wrap);
             gap: 2rem;
-            li{
+
+            li {
                 transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
-                &:hover{
+
+                &:hover {
                     transform: scale(1.1);
                 }
+
                 margin-top: 2rem;
                 list-style-type: none;
-                a{
+
+                a {
                     text-decoration: none;
                     color: $white;
-                    &:hover{
+
+                    &:hover {
                         color: $hovers;
                         text-shadow: 0px 0px 5px;
                     }
                 }
             }
         }
-        .logo-nav{
+
+        .logo-nav {
             padding: 2rem;
-            img{
+
+            img {
                 height: 9.25rem;
                 width: 21.5rem;
             }
         }
-        .waves{
+
+        .waves {
             position: absolute;
             bottom: 0;
             width: 100%;
         }
     }
 }
-.menu-desplegable{
+
+.menu-desplegable {
     display: none;
 }
+
 @-webkit-keyframes scale-up-center {
     0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
     }
+
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-  }
-  @keyframes scale-up-center {
+}
+
+@keyframes scale-up-center {
     0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
     }
+
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
+}

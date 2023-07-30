@@ -10,31 +10,36 @@
     }
 
     .redes-footer-container {
-        padding-left: 0px!important;
+        padding-left: 0px !important;
+
         ul {
             list-style-type: none;
             display: flex;
             justify-content: space-between;
             margin-top: 1rem;
-            padding-left: 0px!important;
+            padding-left: 0px !important;
         }
     }
 
     .servicios-footer-container {
-        .servicios-footer{
+        .servicios-footer {
             font-size: 1rem;
         }
+
         li {
             transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
-            &:hover{
+
+            &:hover {
                 transform: scale(1.1);
             }
+
             list-style-type: none;
 
             a {
-                &hover{
+                &hover {
                     text-shadow: 0px 0px 5px;
                 }
+
                 text-decoration: none;
                 color: $white;
 
@@ -53,11 +58,13 @@
 
     .container-contacto-f {
         color: $white;
-        .contacto-f{
+
+        .contacto-f {
             font-size: 1.75rem;
             font-weight: normal;
         }
-        .gmail{
+
+        .gmail {
             font-size: 1.25rem;
             font-weight: normal;
         }
