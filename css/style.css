@@ -676,6 +676,7 @@ header .navbar-index .waves {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
+    position: sticky;
   }
   header .menu-desplegable .hamb-line {
     background-color: white;
